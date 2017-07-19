@@ -1,5 +1,5 @@
 angular.module('video-player')
-.service('youTube', function($http, $window){
+.service('youTube', function($window, $http){
   // TODO
   this.search = function (query,callback) {
     $http.get('https://www.googleapis.com/youtube/v3/search', {
@@ -16,7 +16,6 @@ angular.module('video-player')
       callback(data.items);
     });
   };
-
 });
 
 //
