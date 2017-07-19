@@ -4,7 +4,7 @@ angular.module('video-player')
 
   return {
     templateUrl: 'src/templates/search.html'
-  }
+  };
 
 
 });

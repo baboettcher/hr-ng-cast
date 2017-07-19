@@ -19,7 +19,7 @@ angular.module('video-player', [])
     templateUrl: 'src/templates/app.html'
 
 
-  }
+  };
 
 
 });

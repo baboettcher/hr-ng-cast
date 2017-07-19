@@ -8,12 +8,12 @@ angular.module('video-player')
       onClick: '<'
     },
     controller: function($scope) {
-      $scope.hello = function(){
+      $scope.hello = function() {
         console.log('hello');
-      }
+      };
     },
     templateUrl: 'src/templates/videoListEntry.html'
-  }
+  };
 
 
 });
