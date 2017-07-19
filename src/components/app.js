@@ -1,15 +1,29 @@
 angular.module('video-player', [])
 
 
-.component('app', {
-  // TODO
+.directive('app', function() {
 
-  controller: function() {
-    console.log(this);
-    this.videoData = window.exampleVideoData;
-  },
+  return {
+    scope: {},
+    controller: function($scope) {
+      $scope.videos = window.exampleVideoData;
+      $scope.currentVideo = window.exampleVideoData[0];
+      $scope.selectVideo = function(clickedVideo) {
+        $scope.currentVideo = clickedVideo;
+      };
+      $scope.searchResults = function() {
 
-  templateUrl: 'src/templates/app.html'
+      };
+    },
+
+    templateUrl: 'src/templates/app.html'
+
+
+  }
 
 
 });
+
+// app.js -> app.html
+//  -> scope: videoList.js -> videoList.html
+//            -> scope: videoListEntry.js -> videoListEntry.html

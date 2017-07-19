@@ -19,22 +19,22 @@ describe('video list', function() {
 
   it('should have a videos property on the scope', function() {
     createVideoListElement({ videos: fakeVideoData }, function(element) {
-      expect(element.isolateScope().$ctrl.videos).to.exist;
-      expect(element.isolateScope().$ctrl.videos).to.be.a('array');
+      expect(element.isolateScope().videos).to.exist;
+      expect(element.isolateScope().videos).to.be.a('array');
     });
   });
 
   it('should have an onClick function on the scope', function() {
     createVideoListElement({ onClick: function () {} }, function(element) {
-      expect(element.isolateScope().$ctrl.onClick).to.exist;
-      expect(element.isolateScope().$ctrl.onClick).to.be.a('function');
+      expect(element.isolateScope().onClick).to.exist;
+      expect(element.isolateScope().onClick).to.be.a('function');
     });
   });
 
   it('should not use & function binding', function() {
     var fakeOnClick = function () {};
     createVideoListElement({ onClick: fakeOnClick }, function(element) {
-      expect(element.isolateScope().$ctrl.onClick).to.equal(fakeOnClick);
+      expect(element.isolateScope().onClick).to.equal(fakeOnClick);
     });
   });
 

@@ -25,23 +25,24 @@ describe('app', function() {
   }));
 
   it('should have a selectVideo function on the scope', function() {
-    expect(element.isolateScope().$ctrl.selectVideo).to.exist;
-    expect(element.isolateScope().$ctrl.selectVideo).to.be.a('function');
+    expect(element.isolateScope().selectVideo).to.exist;
+    expect(element.isolateScope().selectVideo).to.be.a('function');
   });
 
   it('should have a searchResults function on the scope', function() {
-    expect(element.isolateScope().$ctrl.searchResults).to.exist;
-    expect(element.isolateScope().$ctrl.searchResults).to.be.a('function');
+    expect(element.isolateScope().searchResults).to.exist;
+    expect(element.isolateScope().searchResults).to.be.a('function');
   });
 
   it('should have a currentVideo property on the scope', function() {
-    expect(element.isolateScope().$ctrl.currentVideo).to.exist;
-    expect(element.isolateScope().$ctrl.currentVideo).to.be.a('object');
+    console.log(element.isolateScope().currentVideo);
+    expect(element.isolateScope().currentVideo).to.exist;
+    expect(element.isolateScope().currentVideo).to.be.a('object');
   });
 
   it('should have a videos property on the scope', function() {
-    expect(element.isolateScope().$ctrl.videos).to.exist;
-    expect(element.isolateScope().$ctrl.videos).to.be.a('array');
+    expect(element.isolateScope().videos).to.exist;
+    expect(element.isolateScope().videos).to.be.a('array');
   });
 
   it('should render a video player element, a search element, and a video list element', function() {
@@ -58,8 +59,8 @@ describe('app', function() {
   });
 
   it('should load live data when the app is initialized', function() {
-    expect(element.isolateScope().$ctrl.videos).to.equal(fakeVideoData);
-    expect(element.isolateScope().$ctrl.currentVideo).to.equal(fakeVideoData[0]);
+    expect(element.isolateScope().videos).to.equal(fakeVideoData);
+    expect(element.isolateScope().currentVideo).to.equal(fakeVideoData[0]);
   });
 
 });

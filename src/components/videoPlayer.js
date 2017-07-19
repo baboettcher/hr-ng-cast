@@ -1,6 +1,21 @@
 angular.module('video-player')
 
-.component('videoPlayer', {
-  // TODO
-  templateUrl: 'src/templates/videoPlayer.html'
+.filter('trusted', ['$sce', function ($sce) {
+    return function(url) {
+        return $sce.trustAsResourceUrl(url);
+    };
+}])
+
+.directive('videoPlayer', function() {
+
+  return {
+
+    scope: {
+      video: '<'
+    },
+
+    templateUrl: 'src/templates/videoPlayer.html'
+  }
+
+
 });

@@ -1,11 +1,19 @@
 angular.module('video-player')
 
-.component('videoListEntry', {
+.directive('videoListEntry', function() {
 
-    bindings: {
-    video: '<'
-  },
+  return {
+    scope: {
+      video: '<',
+      onClick: '<'
+    },
+    controller: function($scope) {
+      $scope.hello = function(){
+        console.log('hello');
+      }
+    },
+    templateUrl: 'src/templates/videoListEntry.html'
+  }
 
-  // TODO
-  templateUrl: 'src/templates/videoListEntry.html'
+
 });
