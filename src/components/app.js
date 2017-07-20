@@ -13,11 +13,11 @@ angular.module('video-player')
       };
 
       console.log(youTube);
-      $scope.searchService = youTube;
+      $scope.searchService = youTube; //
 
       $scope.searchResults = function(dataArr) {
-        $scope.videos = dataArr;
-        $scope.currentVideo = dataArr[0];
+        $scope.videos = dataArr; // update videolist
+        $scope.currentVideo = dataArr[0]; // update video-player
       };
 
 

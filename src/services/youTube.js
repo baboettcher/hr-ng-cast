@@ -12,7 +12,6 @@ angular.module('video-player')
         key: $window.YOUTUBE_API_KEY
       }
     }).then(function({data}) {
-      console.log(data.items);
       callback(data.items);
     });
   };
